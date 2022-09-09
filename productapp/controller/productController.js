@@ -18,7 +18,7 @@ const product = async(req,res)=>{
            allfounded[i] = found[i];
         } 
 }
-// Founded
+
 res.send(allfounded);
 };
 
