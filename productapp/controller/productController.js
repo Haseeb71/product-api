@@ -5,9 +5,8 @@ const Products = require("../modal/products");
 
 const index = async(req,res)=>{
     var allCategories = {};
-     Categories.find({},(err,found)=>{
+     const found = await Categories.find({});
        res.send(found);
-   })
 };
 const product = async(req,res)=>{
     
