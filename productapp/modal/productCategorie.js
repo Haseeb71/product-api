@@ -1,8 +1,14 @@
 const mongoose = require("mongoose");
 
- const productCategorySchema = new mongoose.Schema({
-    id:Number,
-    name:String,
- });
+const productCategorySchema = new mongoose.Schema({
+   id: {
+      type: Number,
+      required: true
+   },
+   name: {
+      type: String,
+      required: true
+   },
+});
 
-module.exports = mongoose.model("productCategories",productCategorySchema);
+module.exports = mongoose.model("productCategories", productCategorySchema);
