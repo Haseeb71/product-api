@@ -1,19 +1,19 @@
 var express = require("express"),
-mongoose = require("mongoose"),
-bodyParser = require("body-parser"),
+    mongoose = require("mongoose"),
+    bodyParser = require("body-parser"),
 
 
-app = express();
+    app = express();
 
 const port = process.env.PORT || 3000;
 mongoose.connect("mongodb://localhost:27017/Shop");
 
-//Haseeb
-app.use(bodyParser.urlencoded({extended:true}));
+
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(require("./productapp/routes/index"));
 
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`Port is Running at http://localhost:${port}`);
 })
