@@ -11,7 +11,7 @@ mongoose.connect("mongodb://localhost:27017/Shop");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(require("./productapp/routes/index"));
+app.use(require("./src/routes/index"));
 
 
 app.listen(port, () => {
