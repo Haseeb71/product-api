@@ -64,3 +64,5 @@ const updateProduct = async(req,res)=>{
 
 }
 module.exports = { index, product, show,addCategories,addProduct,editProduct,updateProduct };
+
+// Pushing my code to github 
